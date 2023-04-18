@@ -33,4 +33,10 @@ class Asset extends Model
     {
         return $query->where('slug', $slug)->first();
     }
+    public function show($slug)
+    {
+        $asset = Asset::where('slug', $slug)->firstOrFail();
+        return view('nielsvandendries.assetmanagement::assetdetails', ['asset' => $asset]);
+    }
+
 }
