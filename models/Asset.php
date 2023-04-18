@@ -8,7 +8,17 @@ class Asset extends Model
     use \October\Rain\Database\Traits\Validation;
     use Sluggable;
     
-    public $slugs = ['name'];
+    public $slugs = ['slug' => 'name'];
+
+    public function getSluggableOptions()
+    {
+        return [
+            'slugFields' => ['name'],
+            'includeTrashed' => true,
+            'maxLength' => 191,
+            'onUpdate' => true,
+        ];
+    }
     
     public $table = 'nielsvandendries_assetmanagement_asset';
 
