@@ -1,0 +1,17 @@
+plugin:
+    name: 'nielsvandendries.assetmanagement::lang.plugin.name'
+    description: 'nielsvandendries.assetmanagement::lang.plugin.description'
+    author: 'Niels van den Dries'
+    icon: oc-icon-compass
+    homepage: 'https://nvandendries.nl'
+permissions:
+    manager:
+        tab: 'nielsvandendries.assetmanagement::lang.plugin.name'
+        label: 'Asset Management'
+navigation:
+    main-menu-item:
+        label: 'Asset Management'
+        url: nielsvandendries/assetmanagement/asset
+        icon: icon-compass
+        permissions:
+            - manager

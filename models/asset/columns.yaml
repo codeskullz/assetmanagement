@@ -1,0 +1,55 @@
+columns:
+    created_at:
+        label: created_at
+        type: datetime
+        invisible: true
+        sortable: true
+    updated_at:
+        label: updated_at
+        type: datetime
+        invisible: true
+        sortable: true
+    name:
+        label: name
+        type: text
+        searchable: true
+        sortable: true
+    type:
+        label: type
+        type: text
+        searchable: true
+        sortable: true
+    model:
+        label: model
+        type: text
+        searchable: true
+        sortable: true
+    mac:
+        label: mac
+        type: text
+        searchable: true
+        sortable: true
+    ip:
+        label: ip
+        type: text
+        searchable: true
+        sortable: true
+    serialnumber:
+        label: serialnumber
+        type: text
+        searchable: true
+        sortable: true
+    status:
+        label: status
+        type: text
+        searchable: false
+        sortable: true
+    categorie:
+        label: categorie
+        type: text
+        sortable: true
+    notes:
+        label: notes
+        type: text
+        invisible: true
+        sortable: true

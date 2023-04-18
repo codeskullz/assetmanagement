@@ -1,0 +1,56 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        type: text
+    type:
+        label: Type
+        span: auto
+        type: text
+    model:
+        label: Model
+        span: auto
+        type: text
+    mac:
+        label: Mac
+        span: auto
+        type: text
+    ip:
+        label: Ip
+        span: auto
+        type: text
+    serialnumber:
+        label: Serialnumber
+        span: auto
+        type: text
+    categorie:
+        label: Categorie
+        options:
+            Hardware: Hardware
+            Software: Software
+            Other: Other
+        showSearch: true
+        span: auto
+        type: dropdown
+    status:
+        label: Status
+        showSearch: true
+        span: auto
+        options:
+            Active: Active
+            Inactive: Inactive
+        type: dropdown
+    notes:
+        label: Notes
+        size: large
+        span: full
+        type: richeditor
+    image:
+        label: Images
+        span: auto
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        type: fileupload

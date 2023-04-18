@@ -1,0 +1,12 @@
+{% set assets = __SELF__.Assetlist %}
+
+{% for asset in assets %}
+    <div class="asset">
+        <h3>{{ asset.name }}</h3>
+        <p>{{ asset.type }}</p>
+        <img src="{{ asset.image.path }}" alt="{{ asset.name }}">
+    </div>
+{% endfor %}
+
+
+{{ dump(Assetlist) }}
