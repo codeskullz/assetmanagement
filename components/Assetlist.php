@@ -5,7 +5,7 @@ use Nielsvandendries\Assetmanagement\Models\Asset;
 
 class Assetlist extends ComponentBase
 {
-    public $assets;
+    public $asset;
 
     public function componentDetails()
     {
@@ -22,6 +22,6 @@ class Assetlist extends ComponentBase
 
     public function onRun()
     {
-        $this->assets = Asset::all()->toArray();
+        $this->asset = Asset::with('image')->get()->toArray();
     }
 }

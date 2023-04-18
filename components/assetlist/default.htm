@@ -1,12 +1,21 @@
-{% set assets = __SELF__.Assetlist %}
+{% set Assetlist = __SELF__.asset %}
 
-{% for asset in assets %}
-    <div class="asset">
-        <h3>{{ asset.name }}</h3>
-        <p>{{ asset.type }}</p>
-        <img src="{{ asset.image.path }}" alt="{{ asset.name }}">
+{% for asset in Assetlist %}
+<div class="card">
+    <div class="card-header">
+      {{ asset.categorie }}
     </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ asset.name }}</h5>
+      <p class="card-text">{{ asset.type }}</p>
+      <a href="#" class="btn btn-primary">Details</a>
+    </div>
+  </div>
+
+{% else %}
+<div class="no-data mt-3">
+  <div class="alert alert-danger" role="alert">
+    <i><i class="bi bi-exclamation-triangle"></i> No Assets found</i>
+  </div>
+</div>
 {% endfor %}
-
-
-{{ dump(Assetlist) }}
