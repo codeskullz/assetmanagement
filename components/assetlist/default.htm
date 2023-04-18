@@ -1,7 +1,7 @@
 {% set Assetlist = __SELF__.asset %}
 
 {% for asset in Assetlist %}
-<div class="card">
+<div class="card mt-2">
     <div class="card-header">
       {{ asset.categorie }}
     </div>
@@ -19,3 +19,5 @@
   </div>
 </div>
 {% endfor %}
+
+{{ dump(Assetlist) }}

@@ -1,12 +1,8 @@
 <?php namespace Nielsvandendries\Assetmanagement\Components;
 
 use Cms\Classes\ComponentBase;
+use Nielsvandendries\Assetmanagement\Models\Asset;
 
-/**
- * Assetdetails Component
- *
- * @link https://docs.octobercms.com/3.x/extend/cms-components.html
- */
 class Assetdetails extends ComponentBase
 {
     public function componentDetails()
@@ -17,11 +13,25 @@ class Assetdetails extends ComponentBase
         ];
     }
 
-    /**
-     * @link https://docs.octobercms.com/3.x/element/inspector-types.html
-     */
     public function defineProperties()
     {
-        return [];
+        return [
+            'slug' => [
+                'title' => 'Asset Slug',
+                'type' => 'string',
+                'default' => '{{ :slug }}'
+            ]
+        ];
+    }
+
+    public function onRun()
+    {
+        $slug = $this->param('slug');
+
+        $this->asset = Asset::findBySlug($slug);
+
+        if (!$this->asset) {
+            return $this->controller->run('404');
+        }
     }
 }

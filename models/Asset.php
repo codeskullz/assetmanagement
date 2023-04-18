@@ -1,27 +1,22 @@
 <?php namespace NielsVanDenDries\Assetmanagement\Models;
 
 use Model;
+use October\Rain\Database\Traits\Sluggable;
 
-/**
- * Model
- */
 class Asset extends Model
 {
     use \October\Rain\Database\Traits\Validation;
+    use Sluggable;
     
-
-    /**
-     * @var string The database table used by the model.
-     */
+    public $slugs = ['name'];
+    
     public $table = 'nielsvandendries_assetmanagement_asset';
 
-    /**
-     * @var array Validation rules
-     */
     public $rules = [
     ];
 
     public $attachOne = [
     'image' => \System\Models\File::class
-];
+    ];
+
 }
