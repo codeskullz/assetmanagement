@@ -29,4 +29,8 @@ class Asset extends Model
     'image' => \System\Models\File::class
     ];
 
+    public function scopeFindBySlug($query, $slug)
+    {
+        return $query->where('slug', $slug)->first();
+    }
 }

@@ -8,7 +8,7 @@
     <div class="card-body">
       <h5 class="card-title">{{ asset.name }}</h5>
       <p class="card-text">{{ asset.type }}</p>
-      <a href="#" class="btn btn-primary">Details</a>
+      <a href="{{ 'object-details'|page({slug: asset.slug}) }}" class="btn btn-primary">Details</a>
     </div>
   </div>
 
@@ -20,4 +20,4 @@
 </div>
 {% endfor %}
 
-{{ dump(Assetlist) }}
+<!-- {{ dump(Assetlist) }} -->

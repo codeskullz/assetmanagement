@@ -27,9 +27,9 @@ class Assetdetails extends ComponentBase
     public function onRun()
     {
         $slug = $this->param('slug');
-
+    
         $this->asset = Asset::findBySlug($slug);
-
+    
         if (!$this->asset) {
             return $this->controller->run('404');
         }
