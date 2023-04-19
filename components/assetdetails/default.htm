@@ -1,8 +1,6 @@
 {% if asset %}
     <h1>{{ asset.name }}</h1>
-    <img src="{{ asset.image.path }}" alt="{{ asset.name }}" />
-    <p>{{ asset.description }}</p>
-    <p>Price: {{ asset.price }}</p>
+    <p>{{ asset.note }}</p>
 {% else %}
-    <p>Asset not found</p>
+    <p>No asset found.</p>
 {% endif %}

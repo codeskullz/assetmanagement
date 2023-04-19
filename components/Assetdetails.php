@@ -34,4 +34,10 @@ class Assetdetails extends ComponentBase
             return $this->controller->run('404');
         }
     }
+    public function show($id)
+    {
+        $asset = Asset::findOrFail($id);
+        $this->page['asset'] = $asset;
+    }
+
 }
