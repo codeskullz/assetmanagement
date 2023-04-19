@@ -10,15 +10,10 @@ class Asset extends Model
     
     public $slugs = ['slug' => 'name'];
 
-    public function getSluggableOptions()
-    {
-        return [
-            'slugFields' => ['name'],
-            'includeTrashed' => true,
-            'maxLength' => 191,
-            'onUpdate' => true,
-        ];
-    }
+    public $sluggable = [
+        'max_length' => 100,
+        'on_update' => true
+    ];
     
     public $table = 'nielsvandendries_assetmanagement_asset';
 
