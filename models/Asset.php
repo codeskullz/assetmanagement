@@ -38,5 +38,4 @@ class Asset extends Model
         $asset = Asset::where('slug', $slug)->firstOrFail();
         return view('nielsvandendries.assetmanagement::assetdetails', ['asset' => $asset]);
     }
-
 }
