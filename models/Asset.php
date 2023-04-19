@@ -28,14 +28,4 @@ class Asset extends Model
     public $attachOne = [
     'image' => \System\Models\File::class
     ];
-
-    public function scopeFindBySlug($query, $slug)
-    {
-        return $query->where('slug', $slug)->first();
-    }
-    public function show($slug)
-    {
-        $asset = Asset::where('slug', $slug)->firstOrFail();
-        return view('nielsvandendries.assetmanagement::assetdetails', ['asset' => $asset]);
-    }
 }
