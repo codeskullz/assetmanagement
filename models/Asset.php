@@ -30,7 +30,12 @@ class Asset extends Model
 
     public function getImageUrl()
     {
-        return $this->attachment ? $this->attachment->image(100, 100, ['mode' => 'crop']) : '';
+        if ($this->image) {
+            return Storage::url($this->image);
+        } else {
+            return null;
+        }
     }
+
 
 }

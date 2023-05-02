@@ -60,16 +60,13 @@ fields:
         span: full
         type: richeditor
     image:
-        label: Images
-        span: auto
-        mode: file
+        label: Thumbnail
+        mode: image
+        imageWidth: '640'
+        imageHeight: '480'
         useCaption: true
         thumbOptions:
             mode: crop
             extension: auto
+        span: full
         type: fileupload
-    thumb:
-        label: Image
-        span: auto
-        path: ~/plugins/nielsvandendries/assetmanagement/partials/_image_column.htm
-        type: partial

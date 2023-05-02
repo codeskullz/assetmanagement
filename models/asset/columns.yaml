@@ -54,7 +54,13 @@ columns:
         invisible: true
         sortable: true
     image:
-        label: Image
-        type: partial
-        path: ~/plugins/nielsvandendries/assetmanagement/partials/_image_column.htm
+        label: Preview
+        type: image
+        mode: image
+        dimensions: 150x150
+        thumbOptions:
+            mode: crop
+        sortable: false
+        searchable: false
+
 
