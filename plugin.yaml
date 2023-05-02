@@ -11,7 +11,20 @@ permissions:
 navigation:
     main-menu-item:
         label: 'Asset Management'
-        url: nielsvandendries/assetmanagement/asset
+        url: /
         icon: icon-compass
         permissions:
             - manager
+        sideMenu:
+            side-menu-item:
+                label: Assets
+                url: nielsvandendries/assetmanagement/asset
+                icon: icon-dropbox
+                permissions:
+                    - manager
+            side-menu-item2:
+                label: Owners
+                url: nielsvandendries/assetmanagement/owners
+                icon: icon-users
+                permissions:
+                    - manager

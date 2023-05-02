@@ -1,0 +1,21 @@
+fields:
+    company:
+        label: Company
+        span: auto
+        type: text
+    name:
+        label: Name
+        span: auto
+        type: text
+    address:
+        label: Address
+        span: auto
+        type: text
+    zipcode:
+        label: Zipcode
+        span: auto
+        type: text
+    city:
+        label: City
+        span: auto
+        type: text

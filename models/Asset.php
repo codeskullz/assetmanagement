@@ -23,4 +23,8 @@ class Asset extends Model
     public $attachOne = [
     'image' => \System\Models\File::class
     ];
+
+    public $hasOne = [
+        'owner' => \NielsVanDenDries\Assetmanagement\Models\Owners::class
+    ];
 }

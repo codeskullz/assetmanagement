@@ -1,0 +1,11 @@
+name: Owners
+modelClass: NielsVanDenDries\Assetmanagement\Models\Owners
+form: $/nielsvandendries/assetmanagement/models/owners/fields.yaml
+defaultRedirect: nielsvandendries/assetmanagement/owners
+create:
+    redirect: 'nielsvandendries/assetmanagement/owners/update/:id'
+    redirectClose: nielsvandendries/assetmanagement/owners
+update:
+    redirect: nielsvandendries/assetmanagement/owners
+    redirectClose: nielsvandendries/assetmanagement/owners
+preview: {  }

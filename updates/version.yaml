@@ -3,3 +3,8 @@
 1.0.2:
     - 'Created table nielsvandendries_assetmanagement_asset'
     - builder_table_create_nielsvandendries_assetmanagement_asset.php
+1.0.3:
+    - 'Created table nielsvandendries_assetmanagement_owners'
+    - builder_table_create_nielsvandendries_assetmanagement_owners.php
+1.0.4:
+    - 'Pre-Release'

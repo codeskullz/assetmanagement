@@ -1,4 +1,16 @@
 fields:
+    owner:
+        label: Owner
+        span: auto
+        nameFrom: owner
+        descriptionFrom: owner
+        select: name
+        type: relation
+    id:
+        label: ID
+        span: auto
+        readOnly: 1
+        type: text
     name:
         label: Name
         span: auto
@@ -37,8 +49,10 @@ fields:
         showSearch: true
         span: auto
         options:
-            Active: Active
-            Inactive: Inactive
+            'In Use': 'In Use'
+            'In Stock': 'In Stock'
+            'Out of Service': 'Out of Service'
+            Template: Template
         type: dropdown
     notes:
         label: Notes
