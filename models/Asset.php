@@ -27,4 +27,10 @@ class Asset extends Model
     public $hasOne = [
         'owner' => \NielsVanDenDries\Assetmanagement\Models\Owners::class
     ];
+
+    public function getImageUrl()
+    {
+        return $this->attachment ? $this->attachment->image(100, 100, ['mode' => 'crop']) : '';
+    }
+
 }

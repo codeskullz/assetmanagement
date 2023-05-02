@@ -68,3 +68,8 @@ fields:
             mode: crop
             extension: auto
         type: fileupload
+    thumb:
+        label: Image
+        span: auto
+        path: ~/plugins/nielsvandendries/assetmanagement/partials/_image_column.htm
+        type: partial

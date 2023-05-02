@@ -53,3 +53,8 @@ columns:
         type: text
         invisible: true
         sortable: true
+    image:
+        label: Image
+        type: partial
+        path: ~/plugins/nielsvandendries/assetmanagement/partials/_image_column.htm
+
