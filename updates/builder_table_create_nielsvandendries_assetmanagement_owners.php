@@ -14,7 +14,9 @@ class BuilderTableCreateNielsvandendriesAssetmanagementOwners extends Migration
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->string('company')->nullable();
-            $table->string('asset_id')->nullable();
+            $table->string('phone', 255)->nullable();
+            $table->string('mail', 255)->nullable();
+            $table->string('asset_id', 255)->change();
             $table->string('name');
             $table->string('address');
             $table->string('zipcode');

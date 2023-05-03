@@ -32,3 +32,13 @@ columns:
         label: updated_at
         type: datetime
         sortable: true
+    phone:
+        label: Phone
+        type: text
+        searchable: true
+        sortable: true
+    mail:
+        label: Mail
+        type: text
+        searchable: true
+        sortable: true
