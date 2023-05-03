@@ -53,6 +53,20 @@ columns:
         type: text
         invisible: true
         sortable: true
+    user:
+        label: Used by
+        type: text
+        searchable: true
+        sortable: true
+        select: name
+        relation: user
+    owner:
+        label: Owned by
+        type: text
+        searchable: true
+        sortable: true
+        select: company
+        relation: owner
     image:
         label: Preview
         type: image

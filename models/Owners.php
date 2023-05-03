@@ -21,7 +21,7 @@ class Owners extends Model
     public $rules = [
     ];
 
-    public $belongsTo = [
+    public $hasMany = [
         'asset' => \NielsVanDenDries\Assetmanagement\Models\Asset::class
     ];
 }

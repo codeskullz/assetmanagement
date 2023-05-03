@@ -1,9 +1,4 @@
 fields:
-    id:
-        label: ID
-        span: full
-        readOnly: 1
-        type: text
     owner:
         label: Owner
         span: auto

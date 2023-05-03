@@ -13,7 +13,9 @@ class BuilderTableCreateNielsvandendriesAssetmanagementAsset extends Migration
             $table->increments('id')->unsigned();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
+            $table->string('user_id')->nullable();
             $table->string('users_id')->nullable();
+            $table->string('owner_id')->nullable();
             $table->string('name')->nullable();
             $table->string('type')->nullable();
             $table->string('model')->nullable();

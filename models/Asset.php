@@ -24,7 +24,7 @@ class Asset extends Model
     'image' => \System\Models\File::class
     ];
 
-    public $hasOne = [
+    public $belongsTo = [
         'owner' => \NielsVanDenDries\Assetmanagement\Models\Owners::class,
         'user' => \NielsVanDenDries\Assetmanagement\Models\Users::class
     ];

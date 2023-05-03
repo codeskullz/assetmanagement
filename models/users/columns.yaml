@@ -34,3 +34,10 @@ columns:
         type: text
         searchable: true
         sortable: true
+    asset:
+        label: Assets
+        type: text
+        searchable: true
+        sortable: true
+        select: model
+        relation: asset
