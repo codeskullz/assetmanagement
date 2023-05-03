@@ -1,0 +1,41 @@
+fields:
+    company:
+        label: Company
+        span: auto
+        type: text
+    name:
+        label: Name
+        span: auto
+        type: text
+    address:
+        label: Address
+        span: auto
+        type: text
+    zipcode:
+        label: Zipcode
+        span: auto
+        type: text
+    city:
+        label: City
+        span: auto
+        type: text
+    phone:
+        label: Phone
+        span: auto
+        type: text
+    mail:
+        label: Mail
+        span: auto
+        type: text
+tabs:
+    fields:
+        asset:
+            label: 'Assinged Assets'
+            nameFrom: asset
+            descriptionFrom: 'Assinged Assets'
+            emptyOption: 'No Assets Assinged'
+            select: model
+            span: auto
+            readOnly: 0
+            type: relation
+            tab: Assets

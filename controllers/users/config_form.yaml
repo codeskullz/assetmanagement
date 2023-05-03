@@ -1,0 +1,11 @@
+name: Users
+modelClass: NielsVanDenDries\Assetmanagement\Models\Users
+form: $/nielsvandendries/assetmanagement/models/users/fields.yaml
+defaultRedirect: nielsvandendries/assetmanagement/users
+create:
+    redirect: 'nielsvandendries/assetmanagement/users/update/:id'
+    redirectClose: nielsvandendries/assetmanagement/users
+update:
+    redirect: nielsvandendries/assetmanagement/users
+    redirectClose: nielsvandendries/assetmanagement/users
+preview: {  }

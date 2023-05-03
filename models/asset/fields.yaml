@@ -1,4 +1,9 @@
 fields:
+    id:
+        label: ID
+        span: full
+        readOnly: 1
+        type: text
     owner:
         label: Owner
         span: auto
@@ -6,11 +11,13 @@ fields:
         descriptionFrom: owner
         select: company
         type: relation
-    id:
-        label: ID
+    user:
+        label: 'User by'
+        nameFrom: user
+        descriptionFrom: 'Used by'
+        select: Name
         span: auto
-        readOnly: 1
-        type: text
+        type: relation
     name:
         label: Name
         span: auto

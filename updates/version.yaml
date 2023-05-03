@@ -12,3 +12,6 @@ v1.5.0:
     - Release
 v1.5.1:
     - 'Minor Fixes'
+v1.5.2:
+    - 'Created table nielsvandendries_assetmanagement_users'
+    - builder_table_create_nielsvandendries_assetmanagement_users.php

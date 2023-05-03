@@ -28,3 +28,9 @@ navigation:
                 icon: icon-users
                 permissions:
                     - manager
+            side-menu-item3:
+                label: Users
+                url: nielsvandendries/assetmanagement/users
+                icon: icon-user-md
+                permissions:
+                    - manager

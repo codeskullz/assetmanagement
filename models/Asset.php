@@ -25,17 +25,7 @@ class Asset extends Model
     ];
 
     public $hasOne = [
-        'owner' => \NielsVanDenDries\Assetmanagement\Models\Owners::class
+        'owner' => \NielsVanDenDries\Assetmanagement\Models\Owners::class,
+        'user' => \NielsVanDenDries\Assetmanagement\Models\Users::class
     ];
-
-    public function getImageUrl()
-    {
-        if ($this->image) {
-            return Storage::url($this->image);
-        } else {
-            return null;
-        }
-    }
-
-
 }
