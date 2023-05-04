@@ -19,4 +19,5 @@ class Asset extends Controller
         parent::__construct();
         BackendMenu::setContext('NielsVanDenDries.Assetmanagement', 'main-menu-item');
     }
+
 }
