@@ -34,3 +34,9 @@ navigation:
                 icon: icon-user-md
                 permissions:
                     - manager
+            side-menu-item4:
+                label: Settings
+                url: nielsvandendries/assetmanagement/settings
+                icon: icon-gears
+                permissions:
+                    - manager

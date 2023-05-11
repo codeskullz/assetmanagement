@@ -1,0 +1,15 @@
+columns:
+    assets:
+        label: assets
+        type: switch
+        sortable: true
+    owners:
+        label: owners
+        type: switch
+        searchable: true
+        sortable: true
+    users:
+        label: users
+        type: switch
+        searchable: true
+        sortable: true

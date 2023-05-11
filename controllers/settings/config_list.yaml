@@ -1,0 +1,10 @@
+title: Settings
+modelClass: NielsVanDenDries\Assetmanagement\Models\Settings
+list: $/nielsvandendries/assetmanagement/models/settings/columns.yaml
+recordUrl: 'nielsvandendries/assetmanagement/settings/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSorting: 0
+toolbar:
+    search:
+        prompt: 'backend::lang.list.search_prompt'
