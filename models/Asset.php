@@ -21,7 +21,7 @@ class Asset extends Model
     ];
 
     public $attachOne = [
-    'image' => \System\Models\File::class
+        'image' => \System\Models\File::class
     ];
 
     public $belongsTo = [
