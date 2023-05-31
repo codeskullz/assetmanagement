@@ -27,8 +27,8 @@ class Plugin extends PluginBase
     public function boot()
     {
         // Handmatig registreren van de AssetCountReportWidget-klasse
-        Event::listen('backend.report.extendWidgets', function ($widgetManager) {
-            $widgetManager->registerReportWidget(AssetCountReportWidget::class);
-        });
+        // Event::listen('backend.report.extendWidgets', function ($widgetManager) {
+        // $widgetManager->registerReportWidget(AssetCountReportWidget::class);
+        // });
     }
 }
