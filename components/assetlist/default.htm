@@ -1,7 +1,7 @@
 <ul class="list-group list-group-flush">
 	{% for assets in assets %}
     <li class="list-group-item">ID{{ assets.id }} - {{ assets.name }} - {{ assets.type }} - {{ assets.serialnumber }}</li>
-</ul>    
+</ul>
 {% else %}
 
 <div class="no-data">
@@ -10,6 +10,10 @@
 </div>
 </div>
 
+
+
 {% endfor %}
 
 <br>{{ dump() }}
+
+

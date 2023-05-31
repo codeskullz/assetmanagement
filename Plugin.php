@@ -10,6 +10,7 @@ class Plugin extends PluginBase
     {
         return [
             '\NielsVanDenDries\Assetmanagement\Components\Assetlist' => 'Assetlist',
+            '\NielsVanDenDries\Assetmanagement\Components\Assetdetails' => 'Assetdetails',
         ];
     }
 
