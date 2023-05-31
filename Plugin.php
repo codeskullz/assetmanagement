@@ -9,6 +9,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
+            '\NielsVanDenDries\Assetmanagement\Components\Assetlist' => 'Assetlist',
         ];
     }
 

@@ -25,6 +25,7 @@ class BuilderTableCreateNielsvandendriesAssetmanagementAsset extends Migration
             $table->string('status')->nullable();
             $table->string('categorie')->nullable();
             $table->text('notes')->nullable();
+            $table->text('slug')->nullable();
         });
     }
     

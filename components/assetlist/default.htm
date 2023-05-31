@@ -1,3 +1,17 @@
-<p>This is the default markup for component assetlist</p>
+{% set Asset = __SELF__.assets %}
 
-<small>You can delete this file if you want</small>
+<ul class="list-group list-group-flush">
+	{% for assets in Asset %}
+    <li class="list-group-item">ID{{ assets.id }} - {{ assets.name }} - {{ assets.type }} - {{ assets.serialnumber }}</li>
+</ul>    
+{% else %}
+
+<div class="no-data">
+<div class="alert alert-danger" role="alert">
+<i><i class="bi bi-exclamation-triangle"></i> Geen Assets gevonden</i>
+</div>
+</div>
+
+{% endfor %}
+
+<br>{{ dump() }}

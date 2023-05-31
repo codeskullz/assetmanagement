@@ -8,7 +8,7 @@ class Asset extends Model
     use \October\Rain\Database\Traits\Validation;
     use Sluggable;
     
-    public $slugs = ['slug' => 'name'];
+    public $slugs = ['slug' => 'id'];
 
     public $sluggable = [
         'max_length' => 100,
