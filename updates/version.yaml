@@ -1,10 +1,8 @@
 1.0.1:
     - 'Initialize plugin.'
 1.0.2:
-    - 'Created table nielsvandendries_assetmanagement_asset'
     - builder_table_create_nielsvandendries_assetmanagement_asset.php
-    - 'Created table nielsvandendries_assetmanagement_users'
-    - 'builder_table_create_nielsvandendries_assetmanagement_users.php - ''Created table nielsvandendries_assetmanagement_owners'''
+    - builder_table_create_nielsvandendries_assetmanagement_users.php
     - builder_table_create_nielsvandendries_assetmanagement_owners.php
 1.0.5:
     - Pre-Release
@@ -12,6 +10,3 @@
     - Release
 1.5.1:
     - 'Minor Fixes'
-1.5.2:
-    - 'Created table nielsvandendries_assetmanagement_settings'
-    - builder_table_create_nielsvandendries_assetmanagement_settings.php
