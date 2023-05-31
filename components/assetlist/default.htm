@@ -1,7 +1,5 @@
-{% set Asset = __SELF__.assets %}
-
 <ul class="list-group list-group-flush">
-	{% for assets in Asset %}
+	{% for assets in assets %}
     <li class="list-group-item">ID{{ assets.id }} - {{ assets.name }} - {{ assets.type }} - {{ assets.serialnumber }}</li>
 </ul>    
 {% else %}

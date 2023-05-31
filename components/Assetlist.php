@@ -5,7 +5,6 @@ use NielsVanDenDries\Assetmanagement\Models\Asset;
 
 class Assetlist extends ComponentBase
 {
-    public $assets;
     public function componentDetails()
     {
         return [
@@ -21,6 +20,7 @@ class Assetlist extends ComponentBase
 
     public function onRun()
     {
-        $this->assets = Asset::get()->toArray();
+        $assets = Asset::with('owner', 'user')->get()->toArray();
+        $this->page['assets'] = $assets;
     }
 }
