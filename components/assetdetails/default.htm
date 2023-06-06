@@ -1,37 +1,60 @@
 <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
-<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css" />
 
 {% for assets in assets %}
-<h5>Owner</h5>
-<div class="row mt-1">
-  <div class="col">
-    <input type="text" class="form-control" placeholder="{{ assets.owner.name }}" aria-label="First name" disabled>
+<section id="ownersection">
+  <h5>Owner</h5>
+  <div class="row mt-1">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="{{ assets.owner.name }}" aria-label="First name" disabled>
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="{{ assets.owner.city }}" aria-label="Last name" disabled>
+    </div>
   </div>
-  <div class="col">
-    <input type="text" class="form-control" placeholder="{{ assets.owner.city }}" aria-label="Last name" disabled>
+</section>
+
+<section id="assetsection">
+  <h5>Asset</h5>
+  <div class="row mt-1">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="{{ assets.name }}" aria-label="Asset name" disabled>
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="{{ assets.status }}" aria-label="Asset Status" disabled>
+    </div>
   </div>
-</div>
-<h5>Asset</h5>
-<div class="row mt-1">
-  <div class="col">
-    <input type="text" class="form-control" placeholder="{{ assets.name }}" aria-label="Asset name" disabled>
-  </div>
-  <div class="col">
-    <input type="text" class="form-control" placeholder="{{ assets.status }}" aria-label="Asset Status" disabled>
-  </div>
-</div>
-<h5>Location</h5>
-<div style="border: 0; margin: 0;">
+</section>
+
+<section id="locationsection">
+  <h5>Location</h5>
+  <div style="border: 0; margin: 0;">
     <div id="map" style="width: 100%; height: 530px;"></div>
-</div>
-<h5>Description</h5>
-<div class="form-floating">
-  <textarea class="form-control" placeholder="{{ assets.notes|raw }}" id="floatingTextarea2" style="height: 100px" disabled></textarea>
-  <label for="floatingTextarea2">{{ assets.notes|raw }}</label>
-</div>
+  </div>
+</section>
+
+<section id="descriptionsection">
+  <h5>Description</h5>
+  <div class="form-floating">
+    <textarea class="form-control" placeholder="{{ assets.notes|raw }}" id="floatingTextarea2" style="height: 100px"
+      disabled></textarea>
+    <label for="floatingTextarea2">{{ assets.notes|raw }}</label>
+  </div>
+</section>
+
+<section id="fotosection">
+  <h5>Foto's</h5>
+  <div>
+    {% for photoDetail in photoDetails %}
+    <a href="{{ photoDetail.url }}">
+      <img src="{{ photoDetail.url }}" alt="{{ photoDetail.title }}" style="width: 100px;height: 100px;">
+    </a>
+    {% endfor %}
+  </div>
+</section>
 
 <script type="text/javascript">
-  window.onload = function() {
+  window.onload = function () {
     L.mapquest.key = 'ck2OXUAJsF0iz999XGQ62jyXo8AXOVp7';
 
     L.mapquest.geocoding().geocode('{{ assets.user.address }},{{ assets.user.city }}', createMap);
@@ -53,9 +76,8 @@
   }
 </script>
 
-<hr>
-
-<code>
+<section id="debugsection">
+  <code>
   Name: {{ assets.name }}<br>
   Type: {{ assets.type }}<br>
   Model: {{ assets.model }}<br>
@@ -74,6 +96,6 @@
   Created At: {{ carbon(assets.created_at).format('d-m-y H:i') }}<br>
   Notes: {{ assets.notes|raw }}
 </code>
-{% endfor %}
-{{ dump() }}
-
+  {% endfor %}
+  {{ dd(photoDetails) }}
+</section>

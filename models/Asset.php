@@ -20,7 +20,7 @@ class Asset extends Model
     public $rules = [
     ];
 
-    public $attachOne = [
+    public $attachMany = [
         'image' => \System\Models\File::class
     ];
 
@@ -28,4 +28,19 @@ class Asset extends Model
         'owner' => \NielsVanDenDries\Assetmanagement\Models\Owners::class,
         'user' => \NielsVanDenDries\Assetmanagement\Models\Users::class
     ];
+
+    public function getPhotoDetailsAttribute()
+    {
+        $photoDetails = [];
+
+        foreach ($this->image as $photo) {
+            $photoDetails[] = [
+                'url' => $photo->getPath(),
+                'title' => $photo->title,
+                'description' => $photo->description,
+            ];
+        }
+
+        return $photoDetails;
+    }
 }

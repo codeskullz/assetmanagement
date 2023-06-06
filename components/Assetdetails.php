@@ -22,5 +22,15 @@ class Assetdetails extends ComponentBase
     {
         $assets = Asset::with('owner', 'user')->get()->toArray();
         $this->page['assets'] = $assets;
+
+        $image = Asset::with('image')->first();
+    
+        $photoDetails = [];
+    
+        if ($image) {
+            $photoDetails = $image->photoDetails;
+        }
+    
+        $this->page['photoDetails'] = $photoDetails;
     }
 }
