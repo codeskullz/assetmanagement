@@ -25,16 +25,24 @@ class Assetdetails extends ComponentBase
         ];
     }
 
-
     public function onRun()
     {
-        $slug = $this->property('slug');
-        $asset = Asset::where('slug', $slug)->first();
+        $assets = Asset::with('owner', 'user')->get()->toArray();
+        $this->page['assets'] = $assets;
 
-        if ($asset) {
-            $this->page['asset'] = $asset;
-        } else {
-            $this->page['asset'] = null;
+        $image = Asset::with('image')->first();
+    
+        $photoDetails = [];
+    
+        if ($image) {
+            $photoDetails = $image->photoDetails;
         }
+    
+        $this->page['photoDetails'] = $photoDetails;
+
+        $slug = $this->property('slug');
+        $slug = $this->property('slug');
+        $asset = Asset::where('slug', $slug)->first()->get()->toArray();
+        $this->page['asset'] = $asset;
     }
 }
