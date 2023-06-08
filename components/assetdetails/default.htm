@@ -1,3 +1,5 @@
+{{ slug }}
+
 {% set asset = assets.where('slug', slug).first() %}
 
 {% if asset %}
@@ -10,4 +12,5 @@
 <p>Asset niet gevonden.</p>
 {% endif %}
 
-{{ dump() }}
+
+{{ dump(asset) }}
