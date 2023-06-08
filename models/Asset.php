@@ -2,11 +2,11 @@
 
 use Model;
 use October\Rain\Database\Traits\Sluggable;
+use RainLab\Translate\Behaviors\TranslatableModel;
 
 class Asset extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    use Sluggable;
     
     public $slugs = ['slug' => 'id'];
 
