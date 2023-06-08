@@ -17,8 +17,9 @@ class Assetdetails extends ComponentBase
     {
         return [
             'slug' => [
-                'title' => 'Slug',
+                'title' => 'Asset Slug',
                 'description' => 'The slug of the asset',
+                'default' => null,
                 'type' => 'string',
             ],
         ];
@@ -40,8 +41,14 @@ class Assetdetails extends ComponentBase
         $this->page['photoDetails'] = $photoDetails;
 
         $slug = $this->property('slug');
+        traceLog($slug); // Controleer de waarde van de slug
+        
         $asset = Asset::where('slug', $slug)->first();
-    
-        $this->page['asset'] = $asset;
+        traceLog($asset); // Controleer of de asset is gevonden
+        
+        if (!$asset) {
+            traceLog(Asset::all()->pluck('slug')); // Controleer de lijst van alle slugs in de database
+            traceLog('Asset not found'); // Voeg deze regel toe om te controleren of de asset niet wordt gevonden
+        }
     }
 }
