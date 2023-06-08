@@ -1,4 +1,4 @@
-{% set asset = assets.where('slug', ':slug').first() %}
+{% set asset = assets.where('slug', slug).first() %}
 
 {% if asset %}
 <!-- Weergeef de assetgegevens -->
