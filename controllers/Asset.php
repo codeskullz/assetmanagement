@@ -5,6 +5,8 @@ use BackendMenu;
 
 class Asset extends Controller
 {
+    use \October\Rain\Database\Traits\Sluggable;
+
     public $implement = [        'Backend\Behaviors\ListController',        'Backend\Behaviors\FormController'    ];
     
     public $listConfig = 'config_list.yaml';

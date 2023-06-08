@@ -1,12 +1,13 @@
 <?php namespace NielsVanDenDries\Assetmanagement\Models;
 
 use Model;
-use October\Rain\Database\Traits\Sluggable;
+use Sluggable;
 use RainLab\Translate\Behaviors\TranslatableModel;
 
 class Asset extends Model
 {
     use \October\Rain\Database\Traits\Validation;
+    use October\Rain\Database\Traits\Sluggable;
     
     public $slugs = ['slug' => 'id'];
 
