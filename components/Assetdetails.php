@@ -15,7 +15,13 @@ class Assetdetails extends ComponentBase
 
     public function defineProperties()
     {
-        return [];
+        return [
+            'slug' => [
+                'title' => 'Slug',
+                'description' => 'The slug of the asset',
+                'type' => 'string',
+            ],
+        ];
     }
 
     public function onRun()

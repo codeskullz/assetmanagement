@@ -1,6 +1,7 @@
 <ul class="list-group list-group-flush">
     {% for assets in assets %}
     <li class="list-group-item">ID{{ assets.id }} - {{ assets.name }} - {{ assets.type }} - {{ assets.serialnumber }}
+        <a href="{{ 'asset-details/' ~ asset.slug }}">{{ asset.name }}</a>
     </li>
     {% else %}
 </ul>
@@ -9,11 +10,9 @@
 <div class="no-data">
     <div class="alert alert-danger" role="alert">
         <i><i class="bi bi-exclamation-triangle"></i> Geen Assets gevonden</i>
+
     </div>
 </div>
 
 
-
 {% endfor %}
-
-<br>{{ d(assets) }}
