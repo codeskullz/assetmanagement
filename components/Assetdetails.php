@@ -32,5 +32,10 @@ class Assetdetails extends ComponentBase
         }
     
         $this->page['photoDetails'] = $photoDetails;
+
+        $slug = $this->property('slug');
+        $asset = Asset::where('slug', $slug)->first();
+    
+        $this->page['asset'] = $asset;
     }
 }

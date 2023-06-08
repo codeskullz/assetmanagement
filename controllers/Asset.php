@@ -1,12 +1,12 @@
-<?php namespace NielsVanDenDries\Assetmanagement\Controllers;
+<?php 
+namespace NielsVanDenDries\Assetmanagement\Controllers;
 
 use Backend\Classes\Controller;
+use RainLab\Translate\Traits\Sluggable;
 use BackendMenu;
 
 class Asset extends Controller
 {
-    use \October\Rain\Database\Traits\Sluggable;
-
     public $implement = [        
         'Backend\Behaviors\ListController',        
         'Backend\Behaviors\FormController'    
@@ -24,5 +24,4 @@ class Asset extends Controller
         parent::__construct();
         BackendMenu::setContext('NielsVanDenDries.Assetmanagement', 'main-menu-item');
     }
-
 }
