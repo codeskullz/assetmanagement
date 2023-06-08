@@ -97,8 +97,8 @@
   Owner: {{ assets.owner.company }}<br>
   Created At: {{ carbon(assets.created_at).format('d-m-y H:i') }}<br>
   Notes: {{ assets.notes|raw }}
-</code>
+  </code>
   {% endfor %}
 </section>
 
-{{ dump(assets) }}
+{{ dump() }}
